@@ -9,22 +9,23 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            width: 100%;
             overflow: hidden;
         }
         .pdf-container {
             height: 100%;
             width: 100%;
         }
-        .pdf-container embed {
+        .pdf-container iframe {
             height: 100%;
             width: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
     <div class="pdf-container">
-        <embed src="menu.pdf" type="application/pdf" />
+        <iframe src="menu.pdf"></iframe>
     </div>
 </body>
 </html>
-
