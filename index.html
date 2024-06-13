@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe Menu</title>
-    <link rel="stylesheet" href="pdfjs/web/viewer.css">
     <style>
         body, html {
             margin: 0;
@@ -13,11 +12,20 @@
             width: 100%;
             overflow: hidden;
         }
+        .pdf-container {
+            height: 100%;
+            width: 100%;
+        }
+        .pdf-container iframe {
+            height: 100%;
+            width: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
-    <div id="pdf-container">
-        <iframe src="pdfjs/web/viewer.html?file=../menu.pdf" width="100%" height="100%" style="border: none;"></iframe>
+    <div class="pdf-container">
+        <iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME/main/menu.pdf&embedded=true" frameborder="0"></iframe>
     </div>
 </body>
 </html>
