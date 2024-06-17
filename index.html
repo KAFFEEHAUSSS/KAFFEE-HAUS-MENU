@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe Menu</title>
     <style>
-        body, html {
+        body, html { 
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
-            background: #7822ce; /* Background color */
+            background: #38363a; /* Background color */
             overflow-x: hidden; /* Hide horizontal scroll */
         }
         .menu-container {
@@ -20,12 +20,28 @@
             justify-content: flex-start; /* Align items to the start to avoid stretching */
             min-height: 100%; /* Minimum height of 100% */
             width: 100%;
+            position: relative; /* Required for absolute positioning inside */
             overflow-y: auto; /* Enable vertical scrolling */
         }
         img {
             width: 100%; /* Full width */
             height: auto; /* Maintain aspect ratio */
             margin-bottom: 0px; /* No space between images */
+        }
+        .link-container {
+            position: absolute; /* Positioning relative to its nearest positioned ancestor */
+            bottom: 10px; /* Bottom margin */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Offset by half the total width of both images to truly center them */
+            display: flex; /* Ensures images are side-by-side */
+        }
+        .link-image {
+            width: 50px; /* Image width */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 30px; /* Increased space between the images */
+        }
+        .link-image:last-child {
+            margin-right: 0; /* No margin on the right for the last image */
         }
     </style>
 </head>
@@ -34,6 +50,14 @@
         <img src="menu1.jpg" alt="Cafe Menu Page 1">
         <img src="menu2.jpg" alt="Cafe Menu Page 2">
         <img src="menu3.jpg" alt="Cafe Menu Page 3">
+        <div class="link-container">
+            <a href="https://www.instagram.com/kaffeehaus_suly?igsh=aXI5dDE5N3o3aTU5">
+                <img src="instagram.png" alt="Follow us on Instagram" class="link-image">
+            </a>
+            <a href="http://tiktok.com/@kaffeehaus_suly?_t=8nDonp3Wi19&_r=1">
+                <img src="tik-tok.png" alt="Visit our website" class="link-image" style="margin-left: 50px;">
+            </a>
+        </div>
     </div>
 </body>
 </html>
